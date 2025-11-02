@@ -124,7 +124,7 @@ export default function Home() {
       </div>
 
       {/* Filters */}
-      <div className="flex flex-wrap gap-3 mb-8 justify-center">
+      <div className="flex flex-wrap gap-3 mb-8 justify-center hover:text-red">
         {[
           { key: "all", label: "All", emoji: "🍽️" },
           { key: "quick", label: "Quick (<20 min)", emoji: "⚡" },
@@ -141,7 +141,7 @@ export default function Home() {
         transform hover:scale-105 shadow-sm hover:shadow-md
         ${
           activeFilter === f.key
-            ? "from-orange-400 to-amber-500 text-white border-orange-400 shadow-md scale-105"
+            ? "from-orange-400 to-amber-500 border-orange-400 shadow-md scale-105"
             : "bg-white text-gray-700 border-gray-200 hover:border-orange-300 hover:text-orange-500"
         }
       `}
