@@ -133,7 +133,7 @@ export default function RecipeCard({ recipe, onProcedure }) {
 
   return (
     <div 
-      className="group bg-gradient-to-br from-amber-50 to-yellow-50 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-amber-200 overflow-hidden cursor-pointer w-full max-w-sm mx-auto"
+      className="group from-amber-50 to-yellow-50 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-amber-200 overflow-hidden cursor-pointer w-full max-w-sm mx-auto"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={handleCardClick}
@@ -147,7 +147,7 @@ export default function RecipeCard({ recipe, onProcedure }) {
         />
         
         
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div className="absolute inset-0 from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
        
         <div className="absolute top-3 left-3">
@@ -234,7 +234,7 @@ export default function RecipeCard({ recipe, onProcedure }) {
           {/* Cook Now Button */}
           <button
             onClick={handleCardClick}
-            className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center gap-2"
+            className=" from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center gap-2"
           >
             Cook Now
             <FaUtensils size={12} />

@@ -70,13 +70,12 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex">
-    
-      <div className="flex-1 flex items-center justify-center p-8 bg-gradient-to-br from-rose-50 to-pink-100">
+    <div className="min-h-screen flex">   
+      <div className="flex-1 flex items-center justify-center p-8 from-rose-50 to-pink-100">
         <div className="max-w-md w-full">
           
           <div className="text-center mb-8">
-            <div className="w-20 h-20 bg-gradient-to-r from-rose-600 to-rose-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+            <div className="w-20 h-20 from-rose-600 to-rose-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
               <FaUtensils className="text-3xl text-white" />
             </div>
             <h1 className="text-4xl font-bold text-gray-800 mb-2">RecipeBook</h1>
@@ -133,7 +132,7 @@ export default function Login() {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full bg-gradient-to-r from-rose-600 to-rose-500 text-white py-4 px-4 rounded-xl font-bold hover:from-rose-700 hover:to-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-200 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                className="w-full from-rose-600 to-rose-500 text-white py-4 px-4 rounded-xl font-bold hover:from-rose-700 hover:to-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-200 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 {isLoading ? (
                   <div className="w-6 h-6 border-3 border-white border-t-transparent rounded-full animate-spin" />

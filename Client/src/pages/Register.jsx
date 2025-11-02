@@ -103,7 +103,7 @@ export default function Register() {
     >
       <div className="max-w-md w-full bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl overflow-hidden border border-white/20">
         {/* Header */}
-        <div className="bg-gradient-to-r from-rose-600 to-rose-500 p-6 text-center text-white">
+        <div className="from-rose-600 to-rose-500 p-6 text-center text-white">
           <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
             <FaUtensils className="text-2xl text-white" />
           </div>
@@ -177,7 +177,7 @@ export default function Register() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-gradient-to-r from-rose-600 to-rose-500 text-white py-3 px-4 rounded-lg font-semibold hover:from-rose-700 hover:to-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              className="w-full from-rose-600 to-rose-500 text-white py-3 px-4 rounded-lg font-semibold hover:from-rose-700 hover:to-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               {isLoading ? (
                 <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />

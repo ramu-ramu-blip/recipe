@@ -140,7 +140,7 @@ export default function Home() {
         transform hover:scale-105 shadow-sm hover:shadow-md
         ${
           activeFilter === f.key
-            ? "bg-gradient-to-r from-orange-400 to-amber-500 text-white border-orange-400 shadow-md scale-105"
+            ? "from-orange-400 to-amber-500 text-white border-orange-400 shadow-md scale-105"
             : "bg-white text-gray-700 border-gray-200 hover:border-orange-300 hover:text-orange-500"
         }
       `}
