@@ -1,0 +1,110 @@
+RecipeApp - Your Cooking Companion 
+
+About RecipeApp
+RecipeApp is a modern web application for food lovers to discover, save, and cook delicious recipes. It helps you find recipes from around the world and makes cooking easy and fun.
+
+Main Features
+User Account
+Create account with email and password
+
+Secure login system
+
+Stay logged in between visits
+
+Recipe Discovery
+Browse hundreds of recipes
+
+Search by name, ingredients, or cooking time
+
+Filter by:
+
+Cooking time (Quick, Medium, Long)
+
+Food type (Vegetarian, Non-Vegetarian)
+
+Cuisine style
+
+Save Favorites
+Save recipes you like with one click
+
+Access your saved recipes anytime
+
+Private collection only you can see
+
+Beautiful Design
+Works on phones, tablets, and computers
+
+Attractive recipe cards with photos
+
+Easy-to-use menus and buttons
+
+Orange and amber color theme
+
+Shopping List
+Create grocery lists from recipes
+
+Check off items you've bought
+
+Organized ingredients without duplicates
+
+Cooking Help
+Clear step-by-step instructions
+
+Video tutorials for many recipes
+
+Cooking time and difficulty info
+
+Serving size information
+
+Share Recipes
+Share recipes with friends
+
+Share via WhatsApp, Facebook, Twitter, or Email
+
+Easy sharing with one click
+
+How to Use
+For New Users
+Click "Register" to create account
+
+Enter your email and password
+
+Start browsing recipes on home page
+
+Use filters to find recipes you like
+
+Click heart icon to save favorites
+
+For Returning Users
+Click "Login" to sign in
+
+View saved recipes from user menu
+
+Use search to find specific recipes
+
+Create grocery lists for meal planning
+
+Share recipes with friends
+
+Cooking with RecipeApp
+Find a recipe you want to cook
+
+Click "Cook Now" for instructions
+
+Watch video if available
+
+Create shopping list
+
+Follow steps while cooking
+
+Technical Details
+Built With
+React.js for the interface
+
+React Router for navigation
+
+Tailwind CSS for styling
+
+React Icons for icons
+
+Axios for API calls
