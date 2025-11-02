@@ -3,6 +3,7 @@ import { FaHeart, FaRegHeart, FaShareAlt, FaClock, FaUtensils, FaFire } from "re
 import api from "../api/axios";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export default function RecipeCard({ recipe, onProcedure }) {
   const [isFav, setIsFav] = useState(false);
@@ -79,13 +80,12 @@ export default function RecipeCard({ recipe, onProcedure }) {
     try {
       if (isFav) {
         // Remove from favorites
-        await api.delete(`/favorites/${recipe.id}`, {
+        await axios.delete(`http://localhost:5000/api/favorites/${recipe.id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
       } else {
         // Add to favorites
-        await api.post(
-          `/favorites/${recipe.id}`,
+        await axios.post(`http://localhost:5000/api/favorites/${recipe.id}`,
           {},
           { headers: { Authorization: `Bearer ${token}` } }
         );
@@ -234,7 +234,7 @@ export default function RecipeCard({ recipe, onProcedure }) {
           {/* Cook Now Button */}
           <button
             onClick={handleCardClick}
-            className=" from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center gap-2"
+            className="bg-gradient-to-r  from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center gap-2"
           >
             Cook Now
             <FaUtensils size={12} />

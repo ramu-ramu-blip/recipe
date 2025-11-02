@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import api from "../api/axios";
+import axios from "axios";
 
 function getYouTubeEmbed(urlOrId) {
   if (!urlOrId) return null;
@@ -25,7 +26,7 @@ export default function Procedure() {
   useEffect(() => {
     const fetch = async () => {
       try {
-        const res = await api.get(`/recipes/${id}`);
+        const res = await axios.get(`http://localhost:5000/api/recipes/${id}`);
         console.log(res);
         
         setRecipe(res.data);

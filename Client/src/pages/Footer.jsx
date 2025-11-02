@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className=" from-orange-400 to-amber-600 text-white py-12 mt-16">
+    <footer className="bg-gradient-to-br from-orange-400 to-amber-600 text-white py-12 mt-16">
       <div className="container mx-auto px-6">
        
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-8">
@@ -26,7 +26,7 @@ const Footer = () => {
               <div className="bg-white rounded-full p-2 mr-3 shadow-lg">
                 <FaUtensils className="text-orange-500 text-xl" />
               </div>
-              <h2 className="text-2xl font-bold from-white to-amber-100 bg-clip-text text-transparent">
+              <h2 className="text-2xl font-bold bg-gradient-to-r from-white to-amber-100 bg-clip-text text-transparent">
                 RecipeApp
               </h2>
             </div>

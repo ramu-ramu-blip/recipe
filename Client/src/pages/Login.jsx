@@ -10,6 +10,7 @@ import {
   FaEyeSlash,
   FaUtensils
 } from "react-icons/fa";
+import axios from "axios";
 
 export default function Login() {
   const { login } = useContext(AuthContext);
@@ -23,7 +24,7 @@ export default function Login() {
     setIsLoading(true);
     
     try {
-      const res = await api.post("/auth/login", form);
+      const res = await axios.post("http://localhost:5000/api/auth/login", form);
 
       Swal.fire({
         title: "Welcome Back! 🎉",
@@ -72,14 +73,14 @@ export default function Login() {
   return (
     <div className="min-h-screen flex">   
       <div className="flex-1 flex items-center justify-center p-8 from-rose-50 to-pink-100">
-        <div className="max-w-md w-full">
+        <div className=" max-w-md w-full">
           
           <div className="text-center mb-8">
-            <div className="w-20 h-20 from-rose-600 to-rose-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+            <div className="w-20 h-20 bg-gradient-to-r from-rose-600 to-rose-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
               <FaUtensils className="text-3xl text-white" />
             </div>
             <h1 className="text-4xl font-bold text-gray-800 mb-2">RecipeBook</h1>
-            <p className="text-gray-600">Sign in to your account</p>
+            <p className="text-gray-600 ">Sign in to your account</p>
           </div>
 
          
@@ -90,10 +91,10 @@ export default function Login() {
                 <label className="text-sm font-semibold text-gray-700">Email Address</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                    <FaEnvelope className="h-5 w-5 text-rose-500" />
+                    <FaEnvelope className="h-5 w-5  text-rose-500" />
                   </div>
                   <input
-                    className="w-full px-4 py-4 pl-12 pr-4 border-2 border-rose-100 rounded-xl focus:outline-none focus:border-rose-500 focus:ring-2 focus:ring-rose-200 bg-white transition-all duration-200 placeholder-gray-400"
+                    className="w-full px-4 py-4 pl-12  pr-4 border-2 border-rose-100 rounded-xl focus:outline-none focus:border-rose-500 focus:ring-2 focus:ring-rose-200 bg-white transition-all duration-200 placeholder-gray-400"
                     placeholder="Enter your email"
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
@@ -119,7 +120,7 @@ export default function Login() {
                   />
                   <button
                     type="button"
-                    className="absolute inset-y-0 right-0 pr-4 flex items-center text-gray-400 hover:text-rose-600 transition-colors"
+                    className="absolute bg-gradient-to-r inset-y-0 right-0 pr-4 flex items-center text-gray-400 hover:text-rose-600 transition-colors"
                     onClick={togglePasswordVisibility}
                     disabled={isLoading}
                   >
@@ -132,7 +133,7 @@ export default function Login() {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full from-rose-600 to-rose-500 text-white py-4 px-4 rounded-xl font-bold hover:from-rose-700 hover:to-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-200 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                className="w-full bg-gradient-to-r from-rose-600 to-rose-500 text-white py-4 px-4 rounded-xl font-bold hover:from-rose-700 hover:to-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-200 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 {isLoading ? (
                   <div className="w-6 h-6 border-3 border-white border-t-transparent rounded-full animate-spin" />

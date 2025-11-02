@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import api from '../api/axios'
+import axios from 'axios'
 
 export default function RecipeDetail() {
   const { id } = useParams()
@@ -12,7 +13,7 @@ export default function RecipeDetail() {
   
 
   useEffect(() => {
-    api.get(`/recipes/${id}`).then((res) => setRecipe(res.data))
+              axios.get(`http://localhost:5000/api/recipes/${id}`).then((res) => setRecipe(res.data))
   }, [id])
 
   if (!recipe) return <p className="text-center py-20">Loading recipe...</p>

@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import api from "../api/axios";
 import RecipeCard from "../components/RecipeCard";
+import axios from "axios";
 
 export default function Favorites() {
   const [favorites, setFavorites] = useState([]);
@@ -13,7 +14,7 @@ export default function Favorites() {
 
   const fetchFavorites = async () => {
     try {
-      const res = await api.get("/favorites", {
+      const res = await axios.get("http://localhost:5000/api/favorites", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setFavorites(res.data);

@@ -11,6 +11,7 @@ import {
   FaEyeSlash,
   FaUtensils
 } from "react-icons/fa";
+import axios from "axios";
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const passwordRegex = /^[A-Z][A-Za-z0-9!@#]{6,}/;
@@ -22,6 +23,8 @@ export default function Register() {
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
   const { login } = useContext(AuthContext);
+  console.log("line 25",api);
+  
 
   const validate = () => {
     const e = {};
@@ -34,14 +37,15 @@ export default function Register() {
     setErrors(e);
     return Object.keys(e).length === 0;
   };
-
+console.log("40",import.meta.env.API_URL)
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validate()) return;
     
     setIsLoading(true);
     try {
-      const res = await api.post("auth/register", form);
+      const res = await axios.post("http://localhost:5000/api/auth/register", form); 
+        
       
       await Swal.fire({
         title: "🎉 Welcome to RecipeBook!",
@@ -103,7 +107,7 @@ export default function Register() {
     >
       <div className="max-w-md w-full bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl overflow-hidden border border-white/20">
         {/* Header */}
-        <div className="from-rose-600 to-rose-500 p-6 text-center text-white">
+        <div className= " bg-gradient-to-r from-rose-600 to-rose-500 p-6 text-center text-white">
           <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
             <FaUtensils className="text-2xl text-white" />
           </div>
@@ -150,7 +154,7 @@ export default function Register() {
            
             <div className="space-y-2">
               <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <div className="absolute bg-gradient-to-r inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                   <FaLock className="h-5 w-5 text-rose-400" />
                 </div>
                 <input
@@ -177,10 +181,10 @@ export default function Register() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full from-rose-600 to-rose-500 text-white py-3 px-4 rounded-lg font-semibold hover:from-rose-700 hover:to-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              className="w-full bg-gradient-to-r from-rose-600 to-rose-500 text-white py-3 px-4 rounded-lg font-semibold hover:from-rose-700 hover:to-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               {isLoading ? (
-                <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                <div className="w-5 h-5 border-2  border-white border-t-transparent rounded-full animate-spin" />
               ) : null}
               {isLoading ? "Creating Account..." : "Create Account"}
             </button>
