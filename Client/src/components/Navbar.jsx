@@ -14,7 +14,8 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="flex justify-between items-center px-6 py-3 bg-orange-300 text-[18px] font-semibold text-white shadow">
+    <nav className="flex justify-between items-center px-6 py-3 bg-orange-300 text-[18px] 
+    font-semibold text-white shadow">
       
       {/* Logo */}
       <Link to="/" className="flex items-center space-x-2">
@@ -48,7 +49,7 @@ export default function Navbar() {
 
           {menuOpen && (
             <div className="absolute right-0 mt-2 w-44 bg-white text-black rounded-lg shadow-lg z-10">
-              <p className="px-4 py-2 border-b text-sm text-gray-600">
+              <p className="px-4 py-2 border-b text-sm text-gray-600 ">
                 {user.name || "Profile"}
               </p>
               <Link

@@ -133,7 +133,7 @@ export default function RecipeCard({ recipe, onProcedure }) {
 
   return (
     <div 
-      className="group from-amber-50 to-yellow-50 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-amber-200 overflow-hidden cursor-pointer w-full max-w-sm mx-auto"
+      className="group from-amber-50 to-yellow-50 rounded-3xl  shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-amber-200 overflow-hidden cursor-pointer w-full max-w-sm mx-auto"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={handleCardClick}
@@ -160,7 +160,8 @@ export default function RecipeCard({ recipe, onProcedure }) {
         <div className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${
           isHovered ? 'opacity-100' : 'opacity-0'
         }`}>
-          <div className="bg-white/90 backdrop-blur-sm rounded-full px-6 py-3 transform -translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+          <div className="bg-white/90 backdrop-blur-sm rounded-full px-6 py-3 
+          transform -translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
             <span className="text-amber-600 font-semibold text-sm">View Recipe →</span>
           </div>
         </div>

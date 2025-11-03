@@ -21,6 +21,7 @@ export default function Procedure() {
   const [recipe, setRecipe] = useState(null);
   const [loading, setLoading] = useState(true);
 
+ console.log(id);
  
 
   useEffect(() => {
@@ -62,15 +63,16 @@ export default function Procedure() {
     : [];
 
   const embedSrc = getYouTubeEmbed(recipe.video_url);
-  console.log("line 47", recipe.video_url);
+  console.log("line 66", recipe.video_url);
+console.log(embedSrc);
 
   return (
     <div className="p-6 max-w-3xl mx-auto">
       <button
-        onClick={() => navigate(-1)}
+        onClick={() => navigate("/home")}
         className="mb-4 text-sm text-indigo-600"
       >
-        ← Back
+      ❌
       </button>
 
       <h1 className="text-2xl font-bold mb-2">{recipe.title}</h1>
@@ -78,7 +80,7 @@ export default function Procedure() {
         {recipe.cuisine} • {recipe.cook_time_min} min
       </p>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className ="grid md:grid-cols-2 gap-6">
         <div>
           <h2 className="text-lg font-semibold mb-2">Steps</h2>
           {steps.length ? (

@@ -181,7 +181,11 @@ console.log("40",import.meta.env.API_URL)
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-gradient-to-r from-rose-600 to-rose-500 text-white py-3 px-4 rounded-lg font-semibold hover:from-rose-700 hover:to-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              className="w-full bg-gradient-to-r from-rose-600 to-rose-500 text-white py-3 px-4 
+              rounded-lg font-semibold hover:from-rose-700 hover:to-rose-600 focus:outline-none 
+              focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 transition-all duration-200 
+              disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2
+               shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               {isLoading ? (
                 <div className="w-5 h-5 border-2  border-white border-t-transparent rounded-full animate-spin" />
@@ -228,4 +232,4 @@ console.log("40",import.meta.env.API_URL)
       </div>
     </div>
   );
-}
+} 

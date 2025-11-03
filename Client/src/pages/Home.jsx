@@ -20,6 +20,8 @@ export default function Home() {
   const fetchRecipes = async () => {
     try {
       const res = await axios.get("http://localhost:5000/api/recipes");
+      console.log(res.data);
+      
       setAllRecipes(res.data);
       setFilteredRecipes(res.data);
     } catch (err) {
@@ -89,13 +91,15 @@ export default function Home() {
   };
 
   // next opage logic
-  const indexOfLastRecipe = currentPage * recipesPerPage;
-  const indexOfFirstRecipe = indexOfLastRecipe - recipesPerPage;
+  const indexOfLastRecipe = currentPage * recipesPerPage;//1*8=8
+  const indexOfFirstRecipe = indexOfLastRecipe - recipesPerPage;//8-8=0
   const currentRecipes = filteredRecipes.slice(
     indexOfFirstRecipe,
     indexOfLastRecipe
   );
   const totalPages = Math.ceil(filteredRecipes.length / recipesPerPage);
+  console.log(totalPages);
+  
 
   const nextPage = () => {
     if (currentPage < totalPages) setCurrentPage((prev) => prev + 1);
@@ -122,7 +126,7 @@ export default function Home() {
           Search
         </button>
       </div>
-
+ 
       {/* Filters */}
       <div className="flex flex-wrap gap-3 mb-8 justify-center hover:text-red">
         {[
@@ -141,12 +145,12 @@ export default function Home() {
         transform hover:scale-105 shadow-sm hover:shadow-md
         ${
           activeFilter === f.key
-            ? "from-orange-400 to-amber-500 border-orange-400 shadow-md scale-105"
+            ? "from-orange-400 to-amber-500 border-orange-400 shadow-md scale-105 "
             : "bg-white text-gray-700 border-gray-200 hover:border-orange-300 hover:text-orange-500"
         }
       `}
           >
-            <span className="mr-2">{f.emoji}</span>
+            <span className="mr-2  ">{f.emoji}</span>
             {f.label}
           </button>
         ))}
