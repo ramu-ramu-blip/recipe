@@ -16,12 +16,12 @@ async function register(req, res) {
     if (Object.keys(errors).length)
       return res.status(400).json({ errors });
 
-    // ✅ Check if email already exists
+    //  Check if email already exists
     const [rows] = await pool.query('SELECT id FROM users WHERE email = ?', [email]);
     if (rows.length)
       return res.status(400).json({ message: 'Email already registered' });
 
-    // ✅ Hash password and insert new user
+    //  Hash password and insert new user
     const hashed = await bcrypt.hash(password, 10);
     const [result] = await pool.query(
       'INSERT INTO users (name, email, password) VALUES (?, ?, ?)',
